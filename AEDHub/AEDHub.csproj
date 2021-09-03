@@ -89,6 +89,8 @@
     <Compile Include="MdiMain.Designer.cs">
       <DependentUpon>MdiMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\DEBTOR.cs" />
+    <Compile Include="Models\PERSON.cs" />
     <Compile Include="Models\PROJECT.cs" />
     <Compile Include="Models\STUDENT.cs" />
     <Compile Include="Modules\Practical-Activities\AcademyRecord.cs">

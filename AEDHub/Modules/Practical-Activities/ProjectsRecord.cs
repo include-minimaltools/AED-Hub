@@ -39,11 +39,11 @@ namespace AEDHub.Modules.Practical_Activities
             {
                 string idCard = gvProjects.GetFocusedRowCellValue("IdCard").ToString();
 
-                foreach (var project in database)
+                for (int i = 0; i < n; i++)
                 {
-                    if (project.IdCard == idCard)
+                    if (database[i].IdCard == idCard)
                     {
-                        LoadProject(project);
+                        LoadProject(database[i]);
                         break;
                     }
                 }
@@ -57,6 +57,7 @@ namespace AEDHub.Modules.Practical_Activities
 
         private void BbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            CleanForm();
             lcInput.Visible = true;
         }
 
@@ -67,13 +68,35 @@ namespace AEDHub.Modules.Practical_Activities
 
             Array.Resize(ref database, n + 1);
 
-            InsertOrSaveProject(n);
+            InsertOrUpdateProject(n);
             CleanForm();
             n++;
+            MinorBubble();
+            gcProjects.DataSource = database.ToList();
             lcInput.Visible = false;
         }
 
-        private void InsertOrSaveProject(int index)
+        private void CeOnlyLate_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                gcProjects.DataSource = ceOnlyLate.Checked ? database.Where(x => x.isSentLate).ToList() : database.ToList();
+                gcProjects.RefreshDataSource();
+            }
+            catch
+            {
+                XtraMessageBox.Show("Ha ocurrido un error al obtener los proyectos entregados tardemente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            CleanForm();
+            lcInput.Visible = true;
+        }
+
+        private void InsertOrUpdateProject(int index)
         {
             database[index] = new PROJECT()
             {
@@ -83,10 +106,9 @@ namespace AEDHub.Modules.Practical_Activities
                 DateSent = dtSent.DateTime,
                 IdCard = txtIdCard.Text,
                 Name = txtStudentName.Text,
-                LastName = txtStudentLastName.Text
+                LastName = txtStudentLastName.Text,
+                isSentLate = dtLimit.DateTime < dtSent.DateTime
             };
-
-            gcProjects.DataSource = database.ToList();
         }
 
         private void CleanForm()
@@ -110,8 +132,8 @@ namespace AEDHub.Modules.Practical_Activities
                 if (int.Parse(txtScore.Text) > 100 || int.Parse(txtScore.Text) < 0)
                     throw new Exception("Por favor, ingrese una nóta válida");
 
-                foreach(var project in database)
-                    if (project.IdCard == txtIdCard.Text)
+                for(int i = 0; i < n; i ++)
+                    if (database[i].IdCard == txtIdCard.Text)
                         throw new Exception("El carnet ingresado ya posee un trabajo asignado, puede editar dicho usuario o ingresar un carnet que no esté en la base de datos.");
 
                 return true;
@@ -133,5 +155,21 @@ namespace AEDHub.Modules.Practical_Activities
             dtLimit.DateTime = project.DateLimit;
             dtSent.DateTime = project.DateSent;
         }
+
+        private void MinorBubble()
+        {
+            for (int i = 1; i < n; i++)
+                for (int j = n - 1; j > 0; j--)
+                    if (database[j - 1].DateSent > database[j].DateSent)
+                        InvertPosition(j, j - 1);
+        }
+
+        private void InvertPosition(int pos1, int pos2)
+        {
+            var temp = database[pos1];
+            database[pos1] = database[pos2];
+            database[pos2] = temp;
+        }
+        
     }
 }

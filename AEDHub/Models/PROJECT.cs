@@ -8,5 +8,6 @@ namespace AEDHub.Models
         public DateTime DateSent { get; set; }
         public DateTime DateLimit { get; set; }
         public int Score { get; set; }
+        public bool isSentLate { get; set; }
     }
 }
