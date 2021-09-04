@@ -22,6 +22,7 @@ namespace AEDHub.Modules.Practical_Activities
             InitializeComponent();
         }
 
+        #region Event
         private void BtnClose_Click(object sender, EventArgs e)
         {
             CleanForm();
@@ -40,13 +41,12 @@ namespace AEDHub.Modules.Practical_Activities
                 string idCard = gvProjects.GetFocusedRowCellValue("IdCard").ToString();
 
                 for (int i = 0; i < n; i++)
-                {
                     if (database[i].IdCard == idCard)
                     {
                         LoadProject(database[i]);
                         break;
                     }
-                }
+                    
                 lcInput.Visible = true;
             }
             catch
@@ -95,7 +95,9 @@ namespace AEDHub.Modules.Practical_Activities
             CleanForm();
             lcInput.Visible = true;
         }
+        #endregion
 
+        #region Methods
         private void InsertOrUpdateProject(int index)
         {
             database[index] = new PROJECT()
@@ -132,10 +134,6 @@ namespace AEDHub.Modules.Practical_Activities
                 if (int.Parse(txtScore.Text) > 100 || int.Parse(txtScore.Text) < 0)
                     throw new Exception("Por favor, ingrese una nóta válida");
 
-                for(int i = 0; i < n; i ++)
-                    if (database[i].IdCard == txtIdCard.Text)
-                        throw new Exception("El carnet ingresado ya posee un trabajo asignado, puede editar dicho usuario o ingresar un carnet que no esté en la base de datos.");
-
                 return true;
             }
             catch(Exception ex)
@@ -170,6 +168,6 @@ namespace AEDHub.Modules.Practical_Activities
             database[pos1] = database[pos2];
             database[pos2] = temp;
         }
-        
+        #endregion
     }
 }

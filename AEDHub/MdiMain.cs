@@ -1,19 +1,13 @@
-﻿using AEDHub.Modules.Practical_Activities;
+﻿using AEDHub.Modules.Learning_Resources;
+using AEDHub.Modules.Learning_Resources.RA8;
+using AEDHub.Modules.Practical_Activities;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace AEDHub
 {
     public partial class MdiMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
-        Information ucInformation = new Information() { Dock = DockStyle.Fill };
-
-        EmploymentRecord ucEmployment = new EmploymentRecord() { Dock = DockStyle.Fill };
-        AcademyRecord ucAcademy = new AcademyRecord() { Dock = DockStyle.Fill };
-        ProjectsRecord ucProject = new ProjectsRecord() { Dock = DockStyle.Fill };
-        CreditRecord ucCredit = new CreditRecord() { Dock = DockStyle.Fill };
-
         public MdiMain()
         {
             InitializeComponent();
@@ -21,36 +15,181 @@ namespace AEDHub
 
         private void MdiMain_Load(object sender, EventArgs e)
         {
-            Container.Controls.Add(ucInformation);
-            Container.Controls.Add(ucAcademy);
-            Container.Controls.Add(ucEmployment);
-            Container.Controls.Add(ucCredit);
-            Container.Controls.Add(ucProject);
+            
         }
 
         private void AceAcademyRecord_Click(object sender, EventArgs e)
         {
-            ucAcademy.BringToFront();
+            var frm = new FrmAcademyRecord() { Dock = DockStyle.Fill };
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(frm);
+            frm.Show();
         }
 
         private void AceEmploymentRecord_Click(object sender, EventArgs e)
         {
-            ucEmployment.BringToFront();
+            var frm = new FrmEmploymentRecord() { Dock = DockStyle.Fill };
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(frm);
+            frm.Show();
         }
 
         private void AceCreditRecord_Click(object sender, EventArgs e)
         {
-            ucCredit.BringToFront();
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new CreditRecord() { Dock = DockStyle.Fill });
         }
 
         private void AceProjectsRecord_Click(object sender, EventArgs e)
         {
-            ucProject.BringToFront();
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new ProjectsRecord() { Dock = DockStyle.Fill });
         }
 
         private void BbiInformation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ucInformation.BringToFront();
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new Presentation() { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA2_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new RA2() { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA3_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new RA3 { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA5_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new RA5 { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA6_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new RA6 { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA7_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new RA7 { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA8_Click(object sender, EventArgs e)
+        {
+            new RA8().ShowDialog();
+        }
+
+        #region Reports
+        
+        private void AceRA1GabrielsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA1.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA1MarcelsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA1.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA2GabrielsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA2.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA2MarcelsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA1.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA3GabrielsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA3.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA3MarcelsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA3.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA4GabrielsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA4.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA4MarcelsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA4.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA5GabrielsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA5.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA5MarcelsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA5.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA6GabrielsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA6.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA6MarcelsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA6.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA7GabrielsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA7.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA7MarcelsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA7.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA8GabrielsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA8.pdf") { Dock = DockStyle.Fill });
+        }
+
+        private void AceRA8MarcelsReport_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA8.pdf") { Dock = DockStyle.Fill });
+        }
+        #endregion
+
+        private void AcePresentation_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new Presentation { Dock = DockStyle.Fill });
         }
     }
 }

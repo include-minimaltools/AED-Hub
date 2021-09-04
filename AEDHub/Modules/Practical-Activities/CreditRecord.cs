@@ -22,6 +22,7 @@ namespace AEDHub.Modules.Practical_Activities
             InitializeComponent();
         }
 
+        #region Events
         private void GvDebts_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
             pmActions.ShowPopup(MousePosition);
@@ -72,7 +73,9 @@ namespace AEDHub.Modules.Practical_Activities
             }
             lcInput.Visible = true;
         }
+        #endregion
 
+        #region Methods
         private void InsertOrUpdateDebtor(int index)
         {
             database[index] = new DEBTOR()
@@ -81,8 +84,8 @@ namespace AEDHub.Modules.Practical_Activities
                  IdCard = txtIdCard.Text,
                  Address = txtAddress.Text,
                  Debt = Double.Parse(txtDebt.Text),
-                 LastNames = txtLastNames.Text,
-                 Names = txtNames.Text,
+                 LastName = txtLastNames.Text,
+                 Name = txtNames.Text,
                  Phone = txtPhone.Text,
                  isPay = cbStatus.EditValue.Equals("Pagada")
             };
@@ -139,6 +142,9 @@ namespace AEDHub.Modules.Practical_Activities
 
         private void LoadDataTable(char filter)
         {
+            if (database == null)
+                return;
+
             switch (filter)
             {
                 case 'P':
@@ -161,9 +167,10 @@ namespace AEDHub.Modules.Practical_Activities
             txtDebt.Text = debtor.Debt.ToString();
             txtId.Text = debtor.Id.ToString();
             txtIdCard.Text = debtor.IdCard;
-            txtLastNames.Text = debtor.LastNames;
-            txtNames.Text = debtor.Names;
+            txtLastNames.Text = debtor.LastName;
+            txtNames.Text = debtor.Name;
             txtPhone.Text = debtor.Phone;
         }
+        #endregion
     }
 }

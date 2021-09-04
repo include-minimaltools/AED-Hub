@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace AEDHub.Modules.Practical_Activities
+namespace AEDHub
 {
-    public partial class AcademyRecord : DevExpress.XtraEditors.XtraUserControl
+    public partial class Presentation : DevExpress.XtraEditors.XtraUserControl
     {
-        public AcademyRecord()
+        public Presentation()
         {
             InitializeComponent();
         }

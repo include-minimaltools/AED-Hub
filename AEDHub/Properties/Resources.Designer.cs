@@ -83,6 +83,26 @@ namespace AEDHub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap employee {
+            get {
+                object obj = ResourceManager.GetObject("employee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap git_logo {
+            get {
+                object obj = ResourceManager.GetObject("git-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_fec {
             get {
                 object obj = ResourceManager.GetObject("logo-fec", resourceCulture);
@@ -96,6 +116,26 @@ namespace AEDHub.Properties {
         internal static System.Drawing.Bitmap logo_uni {
             get {
                 object obj = ResourceManager.GetObject("logo-uni", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap powered_on {
+            get {
+                object obj = ResourceManager.GetObject("powered-on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quey {
+            get {
+                object obj = ResourceManager.GetObject("quey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

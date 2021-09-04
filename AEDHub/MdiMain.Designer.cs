@@ -30,17 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MdiMain));
-            this.Container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.PanelContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceAcademyRecord = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -48,29 +47,59 @@
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceCreditRecord = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceProjectsRecord = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA1GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA1MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA2GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA2MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA3GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA3MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA4GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA4MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA5GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA5MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA6GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA6MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA7GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA7MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA8GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceRA8MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.bbiInformation = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiGit = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.acePresentation = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Container
+            // PanelContainer
             // 
-            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Container.Location = new System.Drawing.Point(250, 31);
-            this.Container.Margin = new System.Windows.Forms.Padding(2);
-            this.Container.Name = "Container";
-            this.Container.Size = new System.Drawing.Size(645, 426);
-            this.Container.TabIndex = 0;
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(250, 31);
+            this.PanelContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(553, 426);
+            this.PanelContainer.TabIndex = 0;
             // 
             // accordionControl1
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1,
-            this.accordionControlElement2});
+            this.accordionControlElement2,
+            this.accordionControlElement6,
+            this.acePresentation});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(2);
             this.accordionControl1.Name = "accordionControl1";
@@ -83,13 +112,12 @@
             // 
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement3,
-            this.accordionControlElement6,
-            this.accordionControlElement7,
-            this.accordionControlElement8,
-            this.accordionControlElement9,
-            this.accordionControlElement10,
-            this.accordionControlElement11,
-            this.accordionControlElement12});
+            this.aceRA2,
+            this.aceRA3,
+            this.aceRA5,
+            this.aceRA6,
+            this.aceRA7,
+            this.aceRA8});
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Recursos de Aprendizaje";
             // 
@@ -97,55 +125,56 @@
             // 
             this.accordionControlElement3.Name = "accordionControlElement3";
             this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement3.Text = "Recurso 1";
+            this.accordionControlElement3.Text = "Arreglos Desordenados";
             // 
-            // accordionControlElement6
+            // aceRA2
             // 
-            this.accordionControlElement6.Name = "accordionControlElement6";
-            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement6.Text = "Recurso 2";
+            this.aceRA2.Name = "aceRA2";
+            this.aceRA2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA2.Text = "Arreglos Ordenados";
+            this.aceRA2.Click += new System.EventHandler(this.AceRA2_Click);
             // 
-            // accordionControlElement7
+            // aceRA3
             // 
-            this.accordionControlElement7.Name = "accordionControlElement7";
-            this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement7.Text = "Recurso 3";
+            this.aceRA3.Name = "aceRA3";
+            this.aceRA3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA3.Text = "Métodos de Ordenación";
+            this.aceRA3.Click += new System.EventHandler(this.AceRA3_Click);
             // 
-            // accordionControlElement8
+            // aceRA5
             // 
-            this.accordionControlElement8.Name = "accordionControlElement8";
-            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement8.Text = "Recurso 4";
+            this.aceRA5.Name = "aceRA5";
+            this.aceRA5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA5.Text = "Estructuras de Registros";
+            this.aceRA5.Click += new System.EventHandler(this.AceRA5_Click);
             // 
-            // accordionControlElement9
+            // aceRA6
             // 
-            this.accordionControlElement9.Name = "accordionControlElement9";
-            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement9.Text = "Recurso 5";
+            this.aceRA6.Name = "aceRA6";
+            this.aceRA6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA6.Text = "Pilas";
+            this.aceRA6.Click += new System.EventHandler(this.AceRA6_Click);
             // 
-            // accordionControlElement10
+            // aceRA7
             // 
-            this.accordionControlElement10.Name = "accordionControlElement10";
-            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement10.Text = "Recurso 6";
+            this.aceRA7.Name = "aceRA7";
+            this.aceRA7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA7.Text = "Colas";
+            this.aceRA7.Click += new System.EventHandler(this.AceRA7_Click);
             // 
-            // accordionControlElement11
+            // aceRA8
             // 
-            this.accordionControlElement11.Name = "accordionControlElement11";
-            this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement11.Text = "Recurso 7";
-            // 
-            // accordionControlElement12
-            // 
-            this.accordionControlElement12.Name = "accordionControlElement12";
-            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement12.Text = "Recurso 8";
+            this.aceRA8.Name = "aceRA8";
+            this.aceRA8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA8.Text = "MDI y Clases Estáticas";
+            this.aceRA8.Click += new System.EventHandler(this.AceRA8_Click);
             // 
             // accordionControlElement2
             // 
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement4,
             this.accordionControlElement5});
+            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Actividades Prácticas";
             // 
@@ -154,7 +183,6 @@
             this.accordionControlElement4.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceAcademyRecord,
             this.aceEmploymentRecord});
-            this.accordionControlElement4.Expanded = true;
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Text = "Actividad 1";
             // 
@@ -177,7 +205,6 @@
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceCreditRecord,
             this.aceProjectsRecord});
-            this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Actividad 2";
             // 
@@ -195,16 +222,208 @@
             this.aceProjectsRecord.Text = "Registro de Proyectos";
             this.aceProjectsRecord.Click += new System.EventHandler(this.AceProjectsRecord_Click);
             // 
+            // accordionControlElement6
+            // 
+            this.accordionControlElement6.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement7,
+            this.accordionControlElement8,
+            this.accordionControlElement9,
+            this.accordionControlElement10,
+            this.accordionControlElement11,
+            this.accordionControlElement12,
+            this.accordionControlElement13,
+            this.accordionControlElement14});
+            this.accordionControlElement6.Name = "accordionControlElement6";
+            this.accordionControlElement6.Text = "Reportes";
+            // 
+            // accordionControlElement7
+            // 
+            this.accordionControlElement7.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceRA1GabrielsReport,
+            this.aceRA1MarcelsReport});
+            this.accordionControlElement7.Name = "accordionControlElement7";
+            this.accordionControlElement7.Text = "Arreglos Desordenados";
+            // 
+            // aceRA1GabrielsReport
+            // 
+            this.aceRA1GabrielsReport.Name = "aceRA1GabrielsReport";
+            this.aceRA1GabrielsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA1GabrielsReport.Text = "Gabriel";
+            this.aceRA1GabrielsReport.Click += new System.EventHandler(this.AceRA1GabrielsReport_Click);
+            // 
+            // aceRA1MarcelsReport
+            // 
+            this.aceRA1MarcelsReport.Name = "aceRA1MarcelsReport";
+            this.aceRA1MarcelsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA1MarcelsReport.Text = "Marcel";
+            this.aceRA1MarcelsReport.Click += new System.EventHandler(this.AceRA1MarcelsReport_Click);
+            // 
+            // accordionControlElement8
+            // 
+            this.accordionControlElement8.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceRA2GabrielsReport,
+            this.aceRA2MarcelsReport});
+            this.accordionControlElement8.Name = "accordionControlElement8";
+            this.accordionControlElement8.Text = "Arreglos Ordenados";
+            // 
+            // aceRA2GabrielsReport
+            // 
+            this.aceRA2GabrielsReport.Name = "aceRA2GabrielsReport";
+            this.aceRA2GabrielsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA2GabrielsReport.Text = "Gabriel";
+            this.aceRA2GabrielsReport.Click += new System.EventHandler(this.AceRA2GabrielsReport_Click);
+            // 
+            // aceRA2MarcelsReport
+            // 
+            this.aceRA2MarcelsReport.Name = "aceRA2MarcelsReport";
+            this.aceRA2MarcelsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA2MarcelsReport.Text = "Marcel";
+            this.aceRA2MarcelsReport.Click += new System.EventHandler(this.AceRA2MarcelsReport_Click);
+            // 
+            // accordionControlElement9
+            // 
+            this.accordionControlElement9.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceRA3GabrielsReport,
+            this.aceRA3MarcelsReport});
+            this.accordionControlElement9.Name = "accordionControlElement9";
+            this.accordionControlElement9.Text = "Ordenación Directa";
+            // 
+            // aceRA3GabrielsReport
+            // 
+            this.aceRA3GabrielsReport.Name = "aceRA3GabrielsReport";
+            this.aceRA3GabrielsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA3GabrielsReport.Text = "Gabriel";
+            this.aceRA3GabrielsReport.Click += new System.EventHandler(this.AceRA3GabrielsReport_Click);
+            // 
+            // aceRA3MarcelsReport
+            // 
+            this.aceRA3MarcelsReport.Name = "aceRA3MarcelsReport";
+            this.aceRA3MarcelsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA3MarcelsReport.Text = "Marcel";
+            this.aceRA3MarcelsReport.Click += new System.EventHandler(this.AceRA3MarcelsReport_Click);
+            // 
+            // accordionControlElement10
+            // 
+            this.accordionControlElement10.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceRA4GabrielsReport,
+            this.aceRA4MarcelsReport});
+            this.accordionControlElement10.Name = "accordionControlElement10";
+            this.accordionControlElement10.Text = "Shaker Sort & Shell";
+            // 
+            // aceRA4GabrielsReport
+            // 
+            this.aceRA4GabrielsReport.Name = "aceRA4GabrielsReport";
+            this.aceRA4GabrielsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA4GabrielsReport.Text = "Gabriel";
+            this.aceRA4GabrielsReport.Click += new System.EventHandler(this.AceRA4GabrielsReport_Click);
+            // 
+            // aceRA4MarcelsReport
+            // 
+            this.aceRA4MarcelsReport.Name = "aceRA4MarcelsReport";
+            this.aceRA4MarcelsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA4MarcelsReport.Text = "Marcel";
+            this.aceRA4MarcelsReport.Click += new System.EventHandler(this.AceRA4MarcelsReport_Click);
+            // 
+            // accordionControlElement11
+            // 
+            this.accordionControlElement11.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceRA5GabrielsReport,
+            this.aceRA5MarcelsReport});
+            this.accordionControlElement11.Name = "accordionControlElement11";
+            this.accordionControlElement11.Text = "Estructuras de Registro";
+            // 
+            // aceRA5GabrielsReport
+            // 
+            this.aceRA5GabrielsReport.Name = "aceRA5GabrielsReport";
+            this.aceRA5GabrielsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA5GabrielsReport.Text = "Gabriel";
+            this.aceRA5GabrielsReport.Click += new System.EventHandler(this.AceRA5GabrielsReport_Click);
+            // 
+            // aceRA5MarcelsReport
+            // 
+            this.aceRA5MarcelsReport.Name = "aceRA5MarcelsReport";
+            this.aceRA5MarcelsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA5MarcelsReport.Text = "Marcel";
+            this.aceRA5MarcelsReport.Click += new System.EventHandler(this.AceRA5MarcelsReport_Click);
+            // 
+            // accordionControlElement12
+            // 
+            this.accordionControlElement12.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceRA6GabrielsReport,
+            this.aceRA6MarcelsReport});
+            this.accordionControlElement12.Name = "accordionControlElement12";
+            this.accordionControlElement12.Text = "Pilas";
+            // 
+            // aceRA6GabrielsReport
+            // 
+            this.aceRA6GabrielsReport.Name = "aceRA6GabrielsReport";
+            this.aceRA6GabrielsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA6GabrielsReport.Text = "Gabriel";
+            this.aceRA6GabrielsReport.Click += new System.EventHandler(this.AceRA6GabrielsReport_Click);
+            // 
+            // aceRA6MarcelsReport
+            // 
+            this.aceRA6MarcelsReport.Name = "aceRA6MarcelsReport";
+            this.aceRA6MarcelsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA6MarcelsReport.Text = "Marcel";
+            this.aceRA6MarcelsReport.Click += new System.EventHandler(this.AceRA6MarcelsReport_Click);
+            // 
+            // accordionControlElement13
+            // 
+            this.accordionControlElement13.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceRA7GabrielsReport,
+            this.aceRA7MarcelsReport});
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Text = "Colas";
+            // 
+            // aceRA7GabrielsReport
+            // 
+            this.aceRA7GabrielsReport.Name = "aceRA7GabrielsReport";
+            this.aceRA7GabrielsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA7GabrielsReport.Text = "Gabriel";
+            this.aceRA7GabrielsReport.Click += new System.EventHandler(this.AceRA7GabrielsReport_Click);
+            // 
+            // aceRA7MarcelsReport
+            // 
+            this.aceRA7MarcelsReport.Name = "aceRA7MarcelsReport";
+            this.aceRA7MarcelsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA7MarcelsReport.Text = "Marcel";
+            this.aceRA7MarcelsReport.Click += new System.EventHandler(this.AceRA7MarcelsReport_Click);
+            // 
+            // accordionControlElement14
+            // 
+            this.accordionControlElement14.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceRA8GabrielsReport,
+            this.aceRA8MarcelsReport});
+            this.accordionControlElement14.Name = "accordionControlElement14";
+            this.accordionControlElement14.Text = "MDI y Clases Estáticas";
+            // 
+            // aceRA8GabrielsReport
+            // 
+            this.aceRA8GabrielsReport.Name = "aceRA8GabrielsReport";
+            this.aceRA8GabrielsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA8GabrielsReport.Text = "Gabriel";
+            this.aceRA8GabrielsReport.Click += new System.EventHandler(this.AceRA8GabrielsReport_Click);
+            // 
+            // aceRA8MarcelsReport
+            // 
+            this.aceRA8MarcelsReport.Name = "aceRA8MarcelsReport";
+            this.aceRA8MarcelsReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceRA8MarcelsReport.Text = "Marcel";
+            this.aceRA8MarcelsReport.Click += new System.EventHandler(this.AceRA8MarcelsReport_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.bbiInformation});
+            this.bbiInformation,
+            this.bbiGit,
+            this.barButtonItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(895, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(803, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.bbiInformation);
@@ -219,25 +438,47 @@
             this.bbiInformation.Name = "bbiInformation";
             this.bbiInformation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BbiInformation_ItemClick);
             // 
+            // bbiGit
+            // 
+            this.bbiGit.Caption = "fdjfdk";
+            this.bbiGit.Id = 1;
+            this.bbiGit.Name = "bbiGit";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "fafioerfjoeirjf";
+            this.barButtonItem1.Id = 2;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.DockingEnabled = false;
             this.fluentFormDefaultManager1.Form = this;
             this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.bbiInformation});
-            this.fluentFormDefaultManager1.MaxItemId = 1;
+            this.bbiInformation,
+            this.bbiGit,
+            this.barButtonItem1});
+            this.fluentFormDefaultManager1.MaxItemId = 3;
+            // 
+            // acePresentation
+            // 
+            this.acePresentation.Name = "acePresentation";
+            this.acePresentation.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.acePresentation.Text = "Presentación";
+            this.acePresentation.Click += new System.EventHandler(this.AcePresentation_Click);
             // 
             // MdiMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 457);
-            this.ControlContainer = this.Container;
-            this.Controls.Add(this.Container);
+            this.ClientSize = new System.Drawing.Size(803, 457);
+            this.ControlContainer = this.PanelContainer;
+            this.Controls.Add(this.PanelContainer);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(396, 458);
             this.Name = "MdiMain";
             this.NavigationControl = this.accordionControl1;
             this.Text = "Algoritmización y Estructuras de Datos";
@@ -250,19 +491,18 @@
         }
 
         #endregion
-        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer Container;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer PanelContainer;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA3;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA7;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA8;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
@@ -271,6 +511,34 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceCreditRecord;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceProjectsRecord;
         private DevExpress.XtraBars.BarButtonItem bbiInformation;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA1GabrielsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA1MarcelsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA2GabrielsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA2MarcelsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA3GabrielsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA3MarcelsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA4GabrielsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA4MarcelsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA5GabrielsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA5MarcelsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA6GabrielsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA6MarcelsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA7GabrielsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA7MarcelsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA8GabrielsReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA8MarcelsReport;
+        private DevExpress.XtraBars.BarButtonItem bbiGit;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acePresentation;
     }
 }
 
