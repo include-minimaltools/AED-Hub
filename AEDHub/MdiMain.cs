@@ -88,108 +88,119 @@ namespace AEDHub
         }
 
         #region Reports
-        
         private void AceRA1GabrielsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA1.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA1.pdf"));
         }
 
         private void AceRA1MarcelsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA1.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA1.pdf"));
         }
 
         private void AceRA2GabrielsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA2.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA2.pdf"));
         }
 
         private void AceRA2MarcelsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA1.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA1.pdf"));
         }
 
         private void AceRA3GabrielsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA3.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA3.pdf"));
         }
 
         private void AceRA3MarcelsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA3.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA3.pdf"));
         }
 
         private void AceRA4GabrielsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA4.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA4.pdf"));
         }
 
         private void AceRA4MarcelsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA4.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA4.pdf"));
         }
 
         private void AceRA5GabrielsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA5.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA5.pdf"));
         }
 
         private void AceRA5MarcelsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA5.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA5.pdf"));
         }
 
         private void AceRA6GabrielsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA6.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA6.pdf"));
         }
 
         private void AceRA6MarcelsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA6.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA6.pdf"));
         }
 
         private void AceRA7GabrielsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA7.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA7.pdf"));
         }
 
         private void AceRA7MarcelsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA7.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA7.pdf"));
         }
 
         private void AceRA8GabrielsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA8.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Gabriel/RA8.pdf"));
         }
 
         private void AceRA8MarcelsReport_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA8.pdf") { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new PdfReader("/Reports/Marcel/RA8.pdf"));
+        }
+
+        private void AceAP1Report_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/AP1.pdf"));
+        }
+
+        private void AceAP2Report_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new PdfReader("/Reports/AP1.pdf"));
         }
         #endregion
 
         private void AcePresentation_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new Presentation { Dock = DockStyle.Fill });
+            PanelContainer.Controls.Add(new Presentation());
         }
     }
 }

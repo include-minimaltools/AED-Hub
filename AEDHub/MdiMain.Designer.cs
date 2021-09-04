@@ -72,12 +72,14 @@
             this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceRA8GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceRA8MarcelsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceAP1Report = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceAP2Report = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acePresentation = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.bbiInformation = new DevExpress.XtraBars.BarButtonItem();
             this.bbiGit = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-            this.acePresentation = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -174,7 +176,6 @@
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement4,
             this.accordionControlElement5});
-            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Actividades Prácticas";
             // 
@@ -232,7 +233,9 @@
             this.accordionControlElement11,
             this.accordionControlElement12,
             this.accordionControlElement13,
-            this.accordionControlElement14});
+            this.accordionControlElement14,
+            this.aceAP1Report,
+            this.aceAP2Report});
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Reportes";
             // 
@@ -412,13 +415,34 @@
             this.aceRA8MarcelsReport.Text = "Marcel";
             this.aceRA8MarcelsReport.Click += new System.EventHandler(this.AceRA8MarcelsReport_Click);
             // 
+            // aceAP1Report
+            // 
+            this.aceAP1Report.Name = "aceAP1Report";
+            this.aceAP1Report.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceAP1Report.Text = "Laboratorio 1";
+            this.aceAP1Report.Click += new System.EventHandler(this.AceAP1Report_Click);
+            // 
+            // aceAP2Report
+            // 
+            this.aceAP2Report.Name = "aceAP2Report";
+            this.aceAP2Report.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceAP2Report.Text = "Laboratorio 2";
+            this.aceAP2Report.Click += new System.EventHandler(this.AceAP2Report_Click);
+            // 
+            // acePresentation
+            // 
+            this.acePresentation.Name = "acePresentation";
+            this.acePresentation.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.acePresentation.Text = "Presentación";
+            this.acePresentation.Click += new System.EventHandler(this.AcePresentation_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.bbiInformation,
             this.bbiGit,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.skinBarSubItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
@@ -426,17 +450,7 @@
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(803, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.bbiInformation);
-            // 
-            // bbiInformation
-            // 
-            this.bbiInformation.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.bbiInformation.Caption = "About us";
-            this.bbiInformation.Id = 0;
-            this.bbiInformation.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbiInformation.ImageOptions.Image")));
-            this.bbiInformation.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiInformation.ImageOptions.LargeImage")));
-            this.bbiInformation.Name = "bbiInformation";
-            this.bbiInformation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BbiInformation_ItemClick);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.skinBarSubItem1);
             // 
             // bbiGit
             // 
@@ -450,22 +464,24 @@
             this.barButtonItem1.Id = 2;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
+            // skinBarSubItem1
+            // 
+            this.skinBarSubItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.skinBarSubItem1.Caption = "Temas";
+            this.skinBarSubItem1.Id = 3;
+            this.skinBarSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("skinBarSubItem1.ImageOptions.Image")));
+            this.skinBarSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("skinBarSubItem1.ImageOptions.LargeImage")));
+            this.skinBarSubItem1.Name = "skinBarSubItem1";
+            // 
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.DockingEnabled = false;
             this.fluentFormDefaultManager1.Form = this;
             this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.bbiInformation,
             this.bbiGit,
-            this.barButtonItem1});
-            this.fluentFormDefaultManager1.MaxItemId = 3;
-            // 
-            // acePresentation
-            // 
-            this.acePresentation.Name = "acePresentation";
-            this.acePresentation.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.acePresentation.Text = "Presentación";
-            this.acePresentation.Click += new System.EventHandler(this.AcePresentation_Click);
+            this.barButtonItem1,
+            this.skinBarSubItem1});
+            this.fluentFormDefaultManager1.MaxItemId = 6;
             // 
             // MdiMain
             // 
@@ -477,6 +493,7 @@
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("MdiMain.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(396, 458);
             this.Name = "MdiMain";
@@ -510,7 +527,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceEmploymentRecord;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceCreditRecord;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceProjectsRecord;
-        private DevExpress.XtraBars.BarButtonItem bbiInformation;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceRA1GabrielsReport;
@@ -539,6 +555,9 @@
         private DevExpress.XtraBars.BarButtonItem bbiGit;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement acePresentation;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceAP1Report;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceAP2Report;
+        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
     }
 }
 

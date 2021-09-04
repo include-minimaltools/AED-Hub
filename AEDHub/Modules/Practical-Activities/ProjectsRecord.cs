@@ -55,6 +55,37 @@ namespace AEDHub.Modules.Practical_Activities
             }
         }
 
+        private void BbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                string idCard = gvProjects.GetFocusedRowCellValue("IdCard").ToString();
+
+                for (int i = 0; i < n; i++)
+                    if (database[i].IdCard == idCard)
+                    {
+                        for(int j = i; j < n - 1; j++)
+                            database[j] = database[j + 1];
+
+                        break;
+                    }
+
+                n--;
+
+                if (n == 0)
+                    database = null;
+                else
+                    Array.Resize(ref database, n);
+
+                gcProjects.DataSource = null;
+                gcProjects.DataSource = database.ToList();
+            }
+            catch
+            {
+                XtraMessageBox.Show("No hay un registro que editar, intentelo de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void BbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CleanForm();

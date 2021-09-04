@@ -40,10 +40,11 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
             this.tablePanel5 = new DevExpress.Utils.Layout.TablePanel();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.tablePanel3 = new DevExpress.Utils.Layout.TablePanel();
@@ -51,8 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,10 +67,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel5)).BeginInit();
             this.tablePanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
@@ -80,8 +80,6 @@
             this.tablePanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel4)).BeginInit();
             this.tablePanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl2
@@ -96,25 +94,25 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
             this.tablePanel5.SetRow(this.layoutControl2, 1);
-            this.layoutControl2.Size = new System.Drawing.Size(728, 602);
+            this.layoutControl2.Size = new System.Drawing.Size(547, 281);
             this.layoutControl2.TabIndex = 1;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 305);
+            this.label1.Location = new System.Drawing.Point(32, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 21);
+            this.label1.Size = new System.Drawing.Size(148, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Desarrolladores:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AEDHub.Properties.Resources.logo_uni;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(704, 247);
+            this.pictureBox1.Size = new System.Drawing.Size(523, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -124,20 +122,18 @@
             this.tablePanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.tablePanel1.Appearance.Options.UseBackColor = true;
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 19.79F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 68.82F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 21.39F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 76.94F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 23.06F)});
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 44.09F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 40.32F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 41.89F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 38.54F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 45.16F)});
             this.tablePanel1.Controls.Add(this.groupControl2);
             this.tablePanel1.Controls.Add(this.groupControl1);
-            this.tablePanel1.Location = new System.Drawing.Point(12, 330);
+            this.tablePanel1.Location = new System.Drawing.Point(12, 157);
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 17.25F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 236.24F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 13.51F)});
-            this.tablePanel1.Size = new System.Drawing.Size(704, 260);
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 236.24F)});
+            this.tablePanel1.Size = new System.Drawing.Size(523, 112);
             this.tablePanel1.TabIndex = 6;
             // 
             // groupControl2
@@ -148,10 +144,10 @@
             this.tablePanel1.SetColumn(this.groupControl2, 3);
             this.groupControl2.Controls.Add(this.pictureEdit1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(372, 20);
+            this.groupControl2.Location = new System.Drawing.Point(318, 3);
             this.groupControl2.Name = "groupControl2";
-            this.tablePanel1.SetRow(this.groupControl2, 1);
-            this.groupControl2.Size = new System.Drawing.Size(252, 224);
+            this.tablePanel1.SetRow(this.groupControl2, 0);
+            this.groupControl2.Size = new System.Drawing.Size(90, 106);
             this.groupControl2.TabIndex = 7;
             this.groupControl2.Text = "Gabriel Alejandro Ortiz Amador | 2020 - 0325U";
             // 
@@ -166,7 +162,7 @@
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit1.Size = new System.Drawing.Size(248, 199);
+            this.pictureEdit1.Size = new System.Drawing.Size(86, 81);
             this.pictureEdit1.TabIndex = 7;
             // 
             // groupControl1
@@ -176,10 +172,10 @@
             this.tablePanel1.SetColumn(this.groupControl1, 1);
             this.groupControl1.Controls.Add(this.pictureEdit2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(69, 20);
+            this.groupControl1.Location = new System.Drawing.Point(113, 3);
             this.groupControl1.Name = "groupControl1";
-            this.tablePanel1.SetRow(this.groupControl1, 1);
-            this.groupControl1.Size = new System.Drawing.Size(225, 224);
+            this.tablePanel1.SetRow(this.groupControl1, 0);
+            this.groupControl1.Size = new System.Drawing.Size(94, 106);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Marcel Emmanuel Díaz Largaespada | 2020 - 1384U";
             // 
@@ -194,7 +190,7 @@
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit2.Size = new System.Drawing.Size(221, 199);
+            this.pictureEdit2.Size = new System.Drawing.Size(90, 81);
             this.pictureEdit2.TabIndex = 9;
             // 
             // layoutControlGroup1
@@ -209,69 +205,77 @@
             this.emptySpaceItem3,
             this.simpleSeparator1,
             this.emptySpaceItem4,
-            this.simpleSeparator2,
-            this.emptySpaceItem1});
+            this.simpleSeparator2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(728, 602);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(547, 281);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.tablePanel1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 318);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 145);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(708, 264);
+            this.layoutControlItem1.Size = new System.Drawing.Size(527, 116);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.pictureBox1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 11);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 1);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(708, 251);
+            this.layoutControlItem2.Size = new System.Drawing.Size(527, 109);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.label1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(27, 293);
+            this.layoutControlItem3.Location = new System.Drawing.Point(20, 121);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(204, 25);
+            this.layoutControlItem3.Size = new System.Drawing.Size(152, 24);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 1);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(708, 10);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 293);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 121);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(27, 25);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(20, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(231, 293);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(172, 121);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(477, 25);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(355, 24);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 292);
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 120);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(708, 1);
+            this.simpleSeparator1.Size = new System.Drawing.Size(527, 1);
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 110);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(527, 10);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // simpleSeparator2
+            // 
+            this.simpleSeparator2.AllowHotTrack = false;
+            this.simpleSeparator2.AppearanceItemCaption.BackColor = System.Drawing.Color.White;
+            this.simpleSeparator2.AppearanceItemCaption.Options.UseBackColor = true;
+            this.simpleSeparator2.Location = new System.Drawing.Point(0, 0);
+            this.simpleSeparator2.Name = "simpleSeparator2";
+            this.simpleSeparator2.Size = new System.Drawing.Size(527, 1);
             // 
             // tablePanel5
             // 
@@ -287,7 +291,7 @@
             this.tablePanel5.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 139F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel5.Size = new System.Drawing.Size(734, 747);
+            this.tablePanel5.Size = new System.Drawing.Size(553, 426);
             this.tablePanel5.TabIndex = 4;
             // 
             // tablePanel2
@@ -307,7 +311,7 @@
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 26F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 87F)});
-            this.tablePanel2.Size = new System.Drawing.Size(728, 133);
+            this.tablePanel2.Size = new System.Drawing.Size(547, 133);
             this.tablePanel2.TabIndex = 5;
             // 
             // tablePanel3
@@ -320,7 +324,7 @@
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5F)});
             this.tablePanel3.Controls.Add(this.tablePanel4);
             this.tablePanel3.Controls.Add(this.labelControl2);
-            this.tablePanel3.Location = new System.Drawing.Point(117, 49);
+            this.tablePanel3.Location = new System.Drawing.Point(27, 49);
             this.tablePanel3.Name = "tablePanel3";
             this.tablePanel2.SetRow(this.tablePanel3, 1);
             this.tablePanel3.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
@@ -373,31 +377,14 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.tablePanel2.SetColumn(this.labelControl1, 1);
-            this.labelControl1.Location = new System.Drawing.Point(117, 3);
+            this.labelControl1.Location = new System.Drawing.Point(27, 3);
             this.labelControl1.Name = "labelControl1";
             this.tablePanel2.SetRow(this.labelControl1, 0);
             this.labelControl1.Size = new System.Drawing.Size(495, 40);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Universidad Nacional de Ingeniería";
             // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 262);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(708, 30);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // simpleSeparator2
-            // 
-            this.simpleSeparator2.AllowHotTrack = false;
-            this.simpleSeparator2.AppearanceItemCaption.BackColor = System.Drawing.Color.White;
-            this.simpleSeparator2.AppearanceItemCaption.Options.UseBackColor = true;
-            this.simpleSeparator2.Location = new System.Drawing.Point(0, 0);
-            this.simpleSeparator2.Name = "simpleSeparator2";
-            this.simpleSeparator2.Size = new System.Drawing.Size(708, 1);
-            // 
-            // Information
+            // Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -405,8 +392,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.tablePanel5);
             this.DoubleBuffered = true;
-            this.Name = "Information";
-            this.Size = new System.Drawing.Size(734, 747);
+            this.Name = "Presentation";
+            this.Size = new System.Drawing.Size(553, 426);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -422,10 +409,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel5)).EndInit();
             this.tablePanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
@@ -437,8 +425,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel4)).EndInit();
             this.tablePanel4.ResumeLayout(false);
             this.tablePanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,7 +442,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;

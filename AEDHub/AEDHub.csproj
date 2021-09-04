@@ -260,6 +260,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reports\AP1.pdf" />
     <None Include="Reports\Gabriel\RA1.pdf" />
     <None Include="Reports\Gabriel\RA2.pdf" />
     <None Include="Reports\Gabriel\RA3.pdf" />

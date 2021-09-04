@@ -37,6 +37,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiEmployee,
             this.tsmiQuery,
@@ -77,15 +78,17 @@
             this.tsmiSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsmiSalir.Click += new System.EventHandler(this.TsmiSalir_Click);
             // 
-            // MdiMain
+            // RA8
             // 
+            this.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 450);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MdiMain";
+            this.Name = "RA8";
             this.Text = "RA8";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

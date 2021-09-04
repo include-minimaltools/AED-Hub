@@ -73,6 +73,13 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.gcProjects = new DevExpress.XtraGrid.GridControl();
             this.gvProjects = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -82,6 +89,7 @@
             this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pmActions = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.lcInput)).BeginInit();
             this.lcInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).BeginInit();
@@ -170,8 +178,9 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.bbiNew,
-            this.bbiEdit});
-            this.barManager1.MaxItemId = 2;
+            this.bbiEdit,
+            this.bbiDelete});
+            this.barManager1.MaxItemId = 3;
             // 
             // barDockControlTop
             // 
@@ -551,6 +560,14 @@
             // 
             // gvProjects
             // 
+            this.gvProjects.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7});
             this.gvProjects.GridControl = this.gcProjects;
             this.gvProjects.Name = "gvProjects";
             this.gvProjects.OptionsBehavior.Editable = false;
@@ -558,6 +575,62 @@
             this.gvProjects.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
             this.gvProjects.OptionsView.ShowGroupPanel = false;
             this.gvProjects.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.GvProjects_PopupMenuShowing);
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Carnet:";
+            this.gridColumn1.FieldName = "IdCard";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Nombre";
+            this.gridColumn2.FieldName = "Name";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Apellido";
+            this.gridColumn3.FieldName = "LastName";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Nombre  del Proyecto";
+            this.gridColumn4.FieldName = "ProjectName";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Fecha de Envío";
+            this.gridColumn5.FieldName = "DateSent";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Fecha Límite de Entrega";
+            this.gridColumn6.FieldName = "DateLimit";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Calificación";
+            this.gridColumn7.FieldName = "Score";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
             // 
             // layoutControlGroup1
             // 
@@ -632,9 +705,19 @@
             // 
             this.pmActions.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiEdit)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiEdit),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiDelete)});
             this.pmActions.Manager = this.barManager1;
             this.pmActions.Name = "pmActions";
+            // 
+            // bbiDelete
+            // 
+            this.bbiDelete.Caption = "Eliminar Proyecto";
+            this.bbiDelete.Id = 2;
+            this.bbiDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbiDelete.ImageOptions.Image")));
+            this.bbiDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiDelete.ImageOptions.LargeImage")));
+            this.bbiDelete.Name = "bbiDelete";
+            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BbiDelete_ItemClick);
             // 
             // ProjectsRecord
             // 
@@ -753,5 +836,13 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraBars.BarButtonItem bbiDelete;
     }
 }

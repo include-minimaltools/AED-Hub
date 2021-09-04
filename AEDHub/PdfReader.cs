@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using System.IO;
+using System.Windows.Forms;
 
 namespace AEDHub
 {
@@ -8,6 +9,7 @@ namespace AEDHub
         public PdfReader(string path)
         {
             InitializeComponent();
+            Dock = DockStyle.Fill;
             // Debug edition
             pdfViewer.DocumentFilePath = Directory.GetCurrentDirectory().Replace("\\bin\\Debug",string.Empty) + path;
             // Public edition

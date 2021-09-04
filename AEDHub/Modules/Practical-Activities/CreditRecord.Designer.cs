@@ -80,12 +80,19 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.gcDebts = new DevExpress.XtraGrid.GridControl();
             this.gvDebts = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pmActions = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.lcInput)).BeginInit();
             this.lcInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).BeginInit();
@@ -369,8 +376,11 @@
             // 
             this.layoutControlItem12.Control = this.svgImageBox1;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem12.MaxSize = new System.Drawing.Size(104, 0);
+            this.layoutControlItem12.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(104, 58);
+            this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
@@ -437,8 +447,11 @@
             // 
             this.layoutControlItem13.Control = this.svgImageBox2;
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem13.MaxSize = new System.Drawing.Size(104, 0);
+            this.layoutControlItem13.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(104, 58);
+            this.layoutControlItem13.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
@@ -556,8 +569,9 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.bbiNew,
-            this.bbiEdit});
-            this.barManager1.MaxItemId = 2;
+            this.bbiEdit,
+            this.bbiDelete});
+            this.barManager1.MaxItemId = 3;
             // 
             // barDockControlTop
             // 
@@ -632,6 +646,13 @@
             // 
             // gvDebts
             // 
+            this.gvDebts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn6,
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5});
             this.gvDebts.GridControl = this.gcDebts;
             this.gvDebts.Name = "gvDebts";
             this.gvDebts.OptionsBehavior.Editable = false;
@@ -639,6 +660,54 @@
             this.gvDebts.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
             this.gvDebts.OptionsView.ShowGroupPanel = false;
             this.gvDebts.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.GvDebts_PopupMenuShowing);
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Id de Préstamo";
+            this.gridColumn6.FieldName = "Id";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Cédula";
+            this.gridColumn1.FieldName = "IdCard";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Nombre";
+            this.gridColumn2.FieldName = "Name";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Apellido";
+            this.gridColumn3.FieldName = "LastName";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Dirección";
+            this.gridColumn4.FieldName = "Address";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Teléfono";
+            this.gridColumn5.FieldName = "Phone";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
             // 
             // layoutControlGroup1
             // 
@@ -692,9 +761,19 @@
             // 
             this.pmActions.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiEdit)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiEdit),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiDelete)});
             this.pmActions.Manager = this.barManager1;
             this.pmActions.Name = "pmActions";
+            // 
+            // bbiDelete
+            // 
+            this.bbiDelete.Caption = "Eliminar";
+            this.bbiDelete.Id = 2;
+            this.bbiDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbiDelete.ImageOptions.Image")));
+            this.bbiDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiDelete.ImageOptions.LargeImage")));
+            this.bbiDelete.Name = "bbiDelete";
+            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BbiDelete_ItemClick);
             // 
             // CreditRecord
             // 
@@ -820,5 +899,12 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.RadioGroup rgFilter;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraBars.BarButtonItem bbiDelete;
     }
 }

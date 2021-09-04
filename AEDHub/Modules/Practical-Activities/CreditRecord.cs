@@ -172,5 +172,36 @@ namespace AEDHub.Modules.Practical_Activities
             txtPhone.Text = debtor.Phone;
         }
         #endregion
+
+        private void BbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                int id = (int)gvDebts.GetFocusedRowCellValue("Id");
+
+                for (int i = 0; i < n; i++)
+                    if (database[i].Id == id)
+                    {
+                        for (int j = i; j < n - 1; j++)
+                            database[j] = database[j + 1];
+
+                        break;
+                    }
+
+                n--;
+
+                if (n == 0)
+                    database = null;
+                else
+                    Array.Resize(ref database, n);
+
+                gcDebts.DataSource = null;
+                gcDebts.DataSource = database.ToList();
+            }
+            catch
+            {
+                XtraMessageBox.Show("No hay un registro que editar, intentelo de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
