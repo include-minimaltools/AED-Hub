@@ -120,6 +120,7 @@
             this.aceRA6,
             this.aceRA7,
             this.aceRA8});
+            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Recursos de Aprendizaje";
             // 
@@ -176,6 +177,7 @@
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement4,
             this.accordionControlElement5});
+            this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Actividades Prácticas";
             // 
@@ -236,6 +238,7 @@
             this.accordionControlElement14,
             this.aceAP1Report,
             this.aceAP2Report});
+            this.accordionControlElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement6.ImageOptions.Image")));
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Reportes";
             // 
@@ -431,6 +434,7 @@
             // 
             // acePresentation
             // 
+            this.acePresentation.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("acePresentation.ImageOptions.Image")));
             this.acePresentation.Name = "acePresentation";
             this.acePresentation.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.acePresentation.Text = "Presentación";
@@ -499,7 +503,6 @@
             this.Name = "MdiMain";
             this.NavigationControl = this.accordionControl1;
             this.Text = "Algoritmización y Estructuras de Datos";
-            this.Load += new System.EventHandler(this.MdiMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();

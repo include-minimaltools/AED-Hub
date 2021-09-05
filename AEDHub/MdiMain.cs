@@ -13,11 +13,6 @@ namespace AEDHub
             InitializeComponent();
         }
 
-        private void MdiMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void AceAcademyRecord_Click(object sender, EventArgs e)
         {
             var frm = new FrmAcademyRecord() { Dock = DockStyle.Fill };
@@ -85,6 +80,12 @@ namespace AEDHub
         private void AceRA8_Click(object sender, EventArgs e)
         {
             new RA8().ShowDialog();
+        }
+
+        private void AcePresentation_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new Presentation());
         }
 
         #region Reports
@@ -193,14 +194,8 @@ namespace AEDHub
         private void AceAP2Report_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new PdfReader("/Reports/AP1.pdf"));
+            PanelContainer.Controls.Add(new PdfReader("/Reports/AP2.pdf"));
         }
         #endregion
-
-        private void AcePresentation_Click(object sender, EventArgs e)
-        {
-            PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(new Presentation());
-        }
     }
 }

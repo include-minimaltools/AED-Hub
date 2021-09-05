@@ -245,6 +245,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reports\AP2.pdf" />
     <None Include="Resources\employee.png" />
   </ItemGroup>
   <ItemGroup>

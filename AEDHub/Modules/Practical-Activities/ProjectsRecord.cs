@@ -97,11 +97,18 @@ namespace AEDHub.Modules.Practical_Activities
             if (!ValidateForm())
                 return;
 
-            Array.Resize(ref database, n + 1);
+            int index = GetIndex();
 
-            InsertOrUpdateProject(n);
+            if (index < 0)
+            {
+                Array.Resize(ref database, n + 1);
+                InsertOrUpdateProject(n);
+                n++;
+            }
+            else
+                InsertOrUpdateProject(index);
+            
             CleanForm();
-            n++;
             MinorBubble();
             gcProjects.DataSource = database.ToList();
             lcInput.Visible = false;
@@ -198,6 +205,14 @@ namespace AEDHub.Modules.Practical_Activities
             var temp = database[pos1];
             database[pos1] = database[pos2];
             database[pos2] = temp;
+        }
+
+        private int GetIndex()
+        {
+            for (int i = 0; i < n; i++)
+                if (database[i].IdCard == txtIdCard.Text)
+                    return i;
+            return -1;
         }
         #endregion
     }

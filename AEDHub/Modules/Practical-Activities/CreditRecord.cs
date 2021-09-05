@@ -35,17 +35,32 @@ namespace AEDHub.Modules.Practical_Activities
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (!ValidateForm())
-                return;
+            try
+            {
+                if (!ValidateForm())
+                    return;
 
-            Array.Resize(ref database, n + 1);
+                int index = GetIndex();
 
-            InsertOrUpdateDebtor(n);
-            n++;
-            gcDebts.DataSource = database.ToList();
-            MinorBubble();
-            CleanForm();
-            lcInput.Visible = false;
+                if (index < 0)
+                {
+                    Array.Resize(ref database, n + 1);
+                    InsertOrUpdateDebtor(n);
+                    n++;
+                }
+                else
+                    InsertOrUpdateDebtor(index);
+
+                CleanForm();
+                gcDebts.DataSource = database.ToList();
+                MinorBubble();
+                CleanForm();
+                lcInput.Visible = false;
+            }
+            catch
+            {
+                XtraMessageBox.Show("Ha ocurrido un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -56,22 +71,74 @@ namespace AEDHub.Modules.Practical_Activities
 
         private void BbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            CleanForm();
             lcInput.Visible = true;
         }
 
         private void BbiEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            int id =(int) gvDebts.GetFocusedRowCellValue("Id");
-
-            for (int i = 0; i < n; i++)
+            try
             {
-                if (database[i].Id == id)
+                int id =(int) gvDebts.GetFocusedRowCellValue("Id");
+                for (int i = 0; i < n; i++)
                 {
-                    LoadProject(database[i]);
-                    break;
+                    if (database[i].Id == id)
+                    {
+                        LoadDebtor(database[i]);
+                        break;
+                    }
                 }
+                lcInput.Visible = true;
             }
-            lcInput.Visible = true;
+            catch
+            {
+                XtraMessageBox.Show("Ha ocurrido un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void BbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                int id = (int)gvDebts.GetFocusedRowCellValue("Id");
+
+                for (int i = 0; i < n; i++)
+                    if (database[i].Id == id)
+                    {
+                        for (int j = i; j < n - 1; j++)
+                            database[j] = database[j + 1];
+
+                        break;
+                    }
+
+                n--;
+
+                if (n == 0)
+                    database = null;
+                else
+                    Array.Resize(ref database, n);
+
+                gcDebts.DataSource = null;
+                gcDebts.DataSource = database.ToList();
+            }
+            catch
+            {
+                XtraMessageBox.Show("No hay un registro que editar, intentelo de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RgFilter_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadDataTable((char)(rgFilter.EditValue));
+            }
+            catch
+            {
+                XtraMessageBox.Show("Ha ocurrido un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
         #endregion
 
@@ -135,11 +202,6 @@ namespace AEDHub.Modules.Practical_Activities
             database[pos2] = temp;
         }
 
-        private void RgFilter_EditValueChanged(object sender, EventArgs e)
-        {
-            LoadDataTable((char)(rgFilter.EditValue));
-        }
-
         private void LoadDataTable(char filter)
         {
             if (database == null)
@@ -161,7 +223,7 @@ namespace AEDHub.Modules.Practical_Activities
             }
         }
 
-        private void LoadProject(DEBTOR debtor)
+        private void LoadDebtor(DEBTOR debtor)
         {
             txtAddress.Text = debtor.Address;
             txtDebt.Text = debtor.Debt.ToString();
@@ -171,37 +233,14 @@ namespace AEDHub.Modules.Practical_Activities
             txtNames.Text = debtor.Name;
             txtPhone.Text = debtor.Phone;
         }
-        #endregion
 
-        private void BbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private int GetIndex()
         {
-            try
-            {
-                int id = (int)gvDebts.GetFocusedRowCellValue("Id");
-
-                for (int i = 0; i < n; i++)
-                    if (database[i].Id == id)
-                    {
-                        for (int j = i; j < n - 1; j++)
-                            database[j] = database[j + 1];
-
-                        break;
-                    }
-
-                n--;
-
-                if (n == 0)
-                    database = null;
-                else
-                    Array.Resize(ref database, n);
-
-                gcDebts.DataSource = null;
-                gcDebts.DataSource = database.ToList();
-            }
-            catch
-            {
-                XtraMessageBox.Show("No hay un registro que editar, intentelo de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            for (int i = 0; i < n; i++)
+                if(database[i].Id == int.Parse(txtId.Text))
+                    return i;
+            return -1;
         }
+        #endregion
     }
 }
