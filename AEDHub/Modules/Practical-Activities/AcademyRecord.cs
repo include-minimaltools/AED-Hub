@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace AEDHub.Modules.Practical_Activities
 {
-    public partial class FrmAcademyRecord : XtraUserControl
+    public partial class AcademyRecord : XtraUserControl
     {
         private STUDENT[] database;
         private int students = 0;
 
-        public FrmAcademyRecord()
+        public AcademyRecord()
         {
             InitializeComponent();
             Dock = DockStyle.Fill;

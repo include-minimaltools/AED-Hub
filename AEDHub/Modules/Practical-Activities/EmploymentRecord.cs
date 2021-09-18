@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace AEDHub.Modules.Practical_Activities
 {
-    public partial class FrmEmploymentRecord : XtraUserControl
+    public partial class EmploymentRecord : XtraUserControl
     {
         private EMPLOYEE[] database;
         private int employees = 0;
-        public FrmEmploymentRecord()
+        public EmploymentRecord()
         {
             InitializeComponent();
             Dock = DockStyle.Fill;

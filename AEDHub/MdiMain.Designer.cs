@@ -47,6 +47,9 @@
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceCreditRecord = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceProjectsRecord = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acePaths = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceBank = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceRA1GabrielsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -176,7 +179,9 @@
             // 
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement4,
-            this.accordionControlElement5});
+            this.accordionControlElement5,
+            this.accordionControlElement15});
+            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Actividades Prácticas";
@@ -224,6 +229,29 @@
             this.aceProjectsRecord.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceProjectsRecord.Text = "Registro de Proyectos";
             this.aceProjectsRecord.Click += new System.EventHandler(this.AceProjectsRecord_Click);
+            // 
+            // accordionControlElement15
+            // 
+            this.accordionControlElement15.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.acePaths,
+            this.aceBank});
+            this.accordionControlElement15.Expanded = true;
+            this.accordionControlElement15.Name = "accordionControlElement15";
+            this.accordionControlElement15.Text = "Actividad 3";
+            // 
+            // acePaths
+            // 
+            this.acePaths.Name = "acePaths";
+            this.acePaths.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.acePaths.Text = "Directorio";
+            this.acePaths.Click += new System.EventHandler(this.AcePaths_Click);
+            // 
+            // aceBank
+            // 
+            this.aceBank.Name = "aceBank";
+            this.aceBank.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceBank.Text = "Banco";
+            this.aceBank.Click += new System.EventHandler(this.AceBank_Click);
             // 
             // accordionControlElement6
             // 
@@ -561,6 +589,9 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceAP1Report;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceAP2Report;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement15;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acePaths;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceBank;
     }
 }
 

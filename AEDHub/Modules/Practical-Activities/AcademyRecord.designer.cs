@@ -1,6 +1,6 @@
 ﻿namespace AEDHub.Modules.Practical_Activities
 {
-    partial class FrmAcademyRecord
+    partial class AcademyRecord
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace AEDHub.Modules.Practical_Activities
 {
-    partial class FrmEmploymentRecord
+    partial class EmploymentRecord
     {
         /// <summary>
         /// Required designer variable.

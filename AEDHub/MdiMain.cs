@@ -1,6 +1,7 @@
 ﻿using AEDHub.Modules.Learning_Resources;
 using AEDHub.Modules.Learning_Resources.RA8;
 using AEDHub.Modules.Practical_Activities;
+using AEDHub.Modules.Practical_Activities.BankCustomerControlSystem;
 using System;
 using System.Windows.Forms;
 
@@ -15,7 +16,7 @@ namespace AEDHub
 
         private void AceAcademyRecord_Click(object sender, EventArgs e)
         {
-            var frm = new FrmAcademyRecord() { Dock = DockStyle.Fill };
+            var frm = new AcademyRecord() { Dock = DockStyle.Fill };
             PanelContainer.Controls.Clear();
             PanelContainer.Controls.Add(frm);
             frm.Show();
@@ -23,7 +24,7 @@ namespace AEDHub
 
         private void AceEmploymentRecord_Click(object sender, EventArgs e)
         {
-            var frm = new FrmEmploymentRecord() { Dock = DockStyle.Fill };
+            var frm = new EmploymentRecord() { Dock = DockStyle.Fill };
             PanelContainer.Controls.Clear();
             PanelContainer.Controls.Add(frm);
             frm.Show();
@@ -86,6 +87,12 @@ namespace AEDHub
         {
             PanelContainer.Controls.Clear();
             PanelContainer.Controls.Add(new Presentation());
+        }
+
+        private void AcePaths_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(new Paths());
         }
 
         #region Reports
@@ -196,6 +203,13 @@ namespace AEDHub
             PanelContainer.Controls.Clear();
             PanelContainer.Controls.Add(new PdfReader("/Reports/AP2.pdf"));
         }
+
         #endregion
+
+        private void AceBank_Click(object sender, EventArgs e)
+        {
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(value: new BankCustomerControlSystem());
+        }
     }
 }
