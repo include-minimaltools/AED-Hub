@@ -3,6 +3,7 @@ using AEDHub.Modules.Learning_Resources.RA8;
 using AEDHub.Modules.Practical_Activities;
 using AEDHub.Modules.Practical_Activities.BankCustomerControlSystem;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AEDHub
@@ -93,6 +94,13 @@ namespace AEDHub
         {
             PanelContainer.Controls.Clear();
             PanelContainer.Controls.Add(new Paths());
+        }
+
+        private void AceBank_Click(object sender, EventArgs e)
+        {
+            Size = new Size(1200, Size.Height);
+            PanelContainer.Controls.Clear();
+            PanelContainer.Controls.Add(value: new BankCustomerControlSystem());
         }
 
         #region Reports
@@ -206,10 +214,5 @@ namespace AEDHub
 
         #endregion
 
-        private void AceBank_Click(object sender, EventArgs e)
-        {
-            PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(value: new BankCustomerControlSystem());
-        }
     }
 }

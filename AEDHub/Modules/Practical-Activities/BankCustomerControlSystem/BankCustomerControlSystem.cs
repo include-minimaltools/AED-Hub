@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using AEDHub.Tools;
+using DevExpress.Utils;
+using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
-using AEDHub.Tools;
+using System;
+using System.Windows.Forms;
 
 namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
 {
@@ -19,19 +14,33 @@ namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
         CashForm Cash;
         ServicesForm Services;
         bool isFloating = false;
-        public string ServiceClient { get; set; }
-        public string CashClient { get; set; }
 
         public BankCustomerControlSystem()
         {
             InitializeComponent();
             Dock = DockStyle.Fill;
-            CreateForms(false);
-            SetPanels();
-            ShowForms();
         }
 
-        private void BtnFloat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BankCustomerControlSystem_Load(object sender, EventArgs e)
+        {
+            WaitDialogForm wdf = new WaitDialogForm("Conectando con la base de datos...", "Firebase");
+            try
+            {
+                CreateForms(false);
+                SetPanels();
+                ShowForms();
+                wdf.Close();
+            }
+            catch (Exception ex)
+            {
+                if (wdf.Enabled)
+                    wdf.Close();
+                Global.Log.Add(ex);
+                XtraMessageBox.Show("Ha ocurrido un error inesperado, por favor vuelva a intentarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnFloat_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {
@@ -100,20 +109,59 @@ namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
         {
             if(isWindow)
             {
-                ClientRecordForm = new ClientRecord(this) { TopLevel = true, Dock = DockStyle.None, FormBorderStyle = FormBorderStyle.Sizable };
-                Display = new DisplayForm() { TopLevel = true, Dock = DockStyle.None, FormBorderStyle = FormBorderStyle.Sizable };
-                Cash = new CashForm(this) { TopLevel = true, Dock = DockStyle.None, FormBorderStyle = FormBorderStyle.Sizable };
-                Services = new ServicesForm(this) { TopLevel = true, Dock = DockStyle.None, FormBorderStyle = FormBorderStyle.Sizable };
+                ClientRecordForm = new ClientRecord(this) 
+                {
+                    TopLevel = true, 
+                    Dock = DockStyle.None, 
+                    FormBorderStyle = FormBorderStyle.Sizable 
+                };
+                Display = new DisplayForm() 
+                {
+                    TopLevel = true,
+                    Dock = DockStyle.None,
+                    FormBorderStyle = FormBorderStyle.Sizable 
+                };
+                Cash = new CashForm(this) 
+                {
+                    TopLevel = true,
+                    Dock = DockStyle.None,
+                    FormBorderStyle = FormBorderStyle.Sizable
+                };
+                Services = new ServicesForm(this) 
+                {
+                    TopLevel = true,
+                    Dock = DockStyle.None,
+                    FormBorderStyle = FormBorderStyle.Sizable
+                };
             }
             else
             {
-                ClientRecordForm = new ClientRecord(this) { TopLevel = false, Dock = DockStyle.Fill, FormBorderStyle = FormBorderStyle.None };
-                Display = new DisplayForm() { TopLevel = false, Dock = DockStyle.Fill, FormBorderStyle = FormBorderStyle.None };
-                Cash = new CashForm(this) { TopLevel = false, Dock = DockStyle.Fill, FormBorderStyle = FormBorderStyle.None };
-                Services = new ServicesForm(this) { TopLevel = false, Dock = DockStyle.Fill, FormBorderStyle = FormBorderStyle.None };
+                ClientRecordForm = new ClientRecord(this) 
+                {
+                    TopLevel = false,
+                    Dock = DockStyle.Fill,
+                    FormBorderStyle = FormBorderStyle.None 
+                };
+                Display = new DisplayForm() 
+                {
+                    TopLevel = false,
+                    Dock = DockStyle.Fill,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                Cash = new CashForm(this) 
+                {
+                    TopLevel = false,
+                     Dock = DockStyle.Fill,
+                      FormBorderStyle = FormBorderStyle.None
+                };
+                Services = new ServicesForm(this) 
+                {
+                    TopLevel = false,
+                     Dock = DockStyle.Fill,
+                      FormBorderStyle = FormBorderStyle.None
+                };
             }
         }
-
-        public void RefreshDisplay() => Display.RefreshData(CashClient, ServiceClient);
+        public void RefreshDisplay() => Display.RefreshData();
     }
 }

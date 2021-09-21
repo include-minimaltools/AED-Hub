@@ -1,6 +1,9 @@
-﻿using AEDHub.Tools;
+﻿using AEDHub.Firebase;
+using AEDHub.Tools;
 using DevExpress.XtraEditors;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
@@ -22,13 +25,20 @@ namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
                 if (string.IsNullOrEmpty(txtClient.Text))
                     return;
 
-                if((char)rgService.EditValue == 'C')
-                    Global.CashClients.Enqueue(txtClient.Text);
+                if ((char)rgService.EditValue == 'C')
+                {
+                    var stack = RealtimeDatabase.CashClients;
+                    stack.Enqueue(txtClient.Text);
+                    RealtimeDatabase.CashClients = stack;
+                }
                 else
-                    Global.ServicesClients.Enqueue(txtClient.Text);
+                {
+                    var stack = RealtimeDatabase.ServicesClients;
+                    stack.Enqueue(txtClient.Text);
+                    RealtimeDatabase.ServicesClients = stack;
+                }
 
                 txtClient.Text = string.Empty;
-
                 MainForm.RefreshDisplay();
             }
             catch (Exception ex)

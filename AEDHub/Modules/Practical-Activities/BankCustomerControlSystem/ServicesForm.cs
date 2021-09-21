@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using AEDHub.Tools;
+using AEDHub.Firebase;
 
 namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
 {
@@ -20,15 +21,36 @@ namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
             InitializeComponent();
             this.MainForm = MainForm;
         }
+        private void ServicesForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                txtClient.Text = RealtimeDatabase.AssistedClients.Services;
+            }
+            catch(Exception ex)
+            {
+                Global.Log.Add(ex);
+                XtraMessageBox.Show("Ha ocurrido un error inesperado, por favor vuelva a intentarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void BtnNext_Click(object sender, EventArgs e)
         {
             try
             {
-                if (Global.ServicesClients.Count > 0)
-                    MainForm.ServiceClient = Global.ServicesClients.Dequeue();
+                var ServicesClients = RealtimeDatabase.ServicesClients;
+
+                if (ServicesClients.Count > 0)
+                    txtClient.Text = ServicesClients.Dequeue();
                 else
-                    MainForm.CashClient = string.Empty;
-                txtClient.Text = MainForm.ServiceClient;
+                {
+                    txtClient.Text = string.Empty;
+                    XtraMessageBox.Show("La fila esta vacía", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                RealtimeDatabase.ServicesClients = ServicesClients;
+                var AssistedClients = RealtimeDatabase.AssistedClients;
+                AssistedClients.Services = txtClient.Text;
+                RealtimeDatabase.AssistedClients = AssistedClients;
                 MainForm.RefreshDisplay();
             }
             catch(Exception ex)

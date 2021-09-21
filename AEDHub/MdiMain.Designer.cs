@@ -91,10 +91,10 @@
             // PanelContainer
             // 
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContainer.Location = new System.Drawing.Point(250, 31);
+            this.PanelContainer.Location = new System.Drawing.Point(48, 31);
             this.PanelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.PanelContainer.Name = "PanelContainer";
-            this.PanelContainer.Size = new System.Drawing.Size(553, 426);
+            this.PanelContainer.Size = new System.Drawing.Size(755, 426);
             this.PanelContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -108,8 +108,9 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(2);
             this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(250, 426);
+            this.accordionControl1.Size = new System.Drawing.Size(48, 426);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -181,7 +182,6 @@
             this.accordionControlElement4,
             this.accordionControlElement5,
             this.accordionControlElement15});
-            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Actividades Prácticas";
@@ -235,7 +235,6 @@
             this.accordionControlElement15.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.acePaths,
             this.aceBank});
-            this.accordionControlElement15.Expanded = true;
             this.accordionControlElement15.Name = "accordionControlElement15";
             this.accordionControlElement15.Text = "Actividad 3";
             // 

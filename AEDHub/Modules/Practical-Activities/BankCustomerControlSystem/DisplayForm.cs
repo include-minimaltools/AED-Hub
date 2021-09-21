@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using AEDHub.Firebase;
+using AEDHub.Models;
 using AEDHub.Tools;
+using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
 {
@@ -17,19 +13,21 @@ namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
         public DisplayForm()
         {
             InitializeComponent();
+            RefreshData();
         }
 
-        public void RefreshData(string cashClient, string serviceClient)
+        public void RefreshData()
         {
             try
             {
-                lblServiceClient.Text = serviceClient;
-                lblCashClient.Text = cashClient;
+                var AssistedClients = RealtimeDatabase.AssistedClients;
+                lblServiceClient.Text = AssistedClients.Services;
+                lblCashClient.Text = AssistedClients.Cash;
 
                 gcCashClients.DataSource = null;
-                gcCashClients.DataSource = Global.CashClients;
+                gcCashClients.DataSource = RealtimeDatabase.CashClients;
                 gcServicesClients.DataSource = null;
-                gcServicesClients.DataSource = Global.ServicesClients;
+                gcServicesClients.DataSource = RealtimeDatabase.ServicesClients;
             }
             catch(Exception ex)
             {
