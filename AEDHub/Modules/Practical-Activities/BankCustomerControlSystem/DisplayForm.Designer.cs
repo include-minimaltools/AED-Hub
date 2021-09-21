@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lblServiceClient = new System.Windows.Forms.Label();
+            this.lblCashClient = new System.Windows.Forms.Label();
             this.gcServicesClients = new DevExpress.XtraGrid.GridControl();
             this.gvServicesClients = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcCashClients = new DevExpress.XtraGrid.GridControl();
@@ -48,11 +50,9 @@
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lblCashClient = new System.Windows.Forms.Label();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lblServiceClient = new System.Windows.Forms.Label();
+            this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -75,8 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +95,20 @@
             this.layoutControl1.Size = new System.Drawing.Size(470, 316);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // lblServiceClient
+            // 
+            this.lblServiceClient.Location = new System.Drawing.Point(308, 152);
+            this.lblServiceClient.Name = "lblServiceClient";
+            this.lblServiceClient.Size = new System.Drawing.Size(116, 20);
+            this.lblServiceClient.TabIndex = 9;
+            // 
+            // lblCashClient
+            // 
+            this.lblCashClient.Location = new System.Drawing.Point(77, 152);
+            this.lblCashClient.Name = "lblCashClient";
+            this.lblCashClient.Size = new System.Drawing.Size(116, 20);
+            this.lblCashClient.TabIndex = 8;
             // 
             // gcServicesClients
             // 
@@ -279,13 +293,6 @@
             this.emptySpaceItem7.Size = new System.Drawing.Size(65, 40);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // lblCashClient
-            // 
-            this.lblCashClient.Location = new System.Drawing.Point(77, 152);
-            this.lblCashClient.Name = "lblCashClient";
-            this.lblCashClient.Size = new System.Drawing.Size(116, 20);
-            this.lblCashClient.TabIndex = 8;
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.lblCashClient;
@@ -299,14 +306,6 @@
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(116, 13);
             // 
-            // emptySpaceItem8
-            // 
-            this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(240, 124);
-            this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(56, 40);
-            this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
@@ -315,12 +314,13 @@
             this.emptySpaceItem9.Size = new System.Drawing.Size(34, 40);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // lblServiceClient
+            // emptySpaceItem8
             // 
-            this.lblServiceClient.Location = new System.Drawing.Point(308, 152);
-            this.lblServiceClient.Name = "lblServiceClient";
-            this.lblServiceClient.Size = new System.Drawing.Size(116, 20);
-            this.lblServiceClient.TabIndex = 9;
+            this.emptySpaceItem8.AllowHotTrack = false;
+            this.emptySpaceItem8.Location = new System.Drawing.Point(240, 124);
+            this.emptySpaceItem8.Name = "emptySpaceItem8";
+            this.emptySpaceItem8.Size = new System.Drawing.Size(56, 40);
+            this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
@@ -339,6 +339,7 @@
             this.ClientSize = new System.Drawing.Size(470, 316);
             this.Controls.Add(this.layoutControl1);
             this.Name = "DisplayForm";
+            this.Load += new System.EventHandler(this.DisplayForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcServicesClients)).EndInit();
@@ -360,8 +361,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 

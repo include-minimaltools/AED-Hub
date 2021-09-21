@@ -163,5 +163,7 @@ namespace AEDHub.Modules.Practical_Activities.BankCustomerControlSystem
             }
         }
         public void RefreshDisplay() => Display.RefreshData();
+
+        private void BankCustomerControlSystem_Enter(object sender, EventArgs e) => Display.RefreshData();
     }
 }

@@ -158,6 +158,7 @@
             this.Name = "BankCustomerControlSystem";
             this.Size = new System.Drawing.Size(529, 390);
             this.Load += new System.EventHandler(this.BankCustomerControlSystem_Load);
+            this.Enter += new System.EventHandler(this.BankCustomerControlSystem_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
